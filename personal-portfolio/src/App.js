@@ -7,6 +7,8 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import { Switch } from 'react-router';
 
 function App() {
   return (

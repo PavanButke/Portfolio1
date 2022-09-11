@@ -9,6 +9,13 @@ import WhiteBoard from "../assets/img/WhiteBoard.PNG"
 import TicketApp from "../assets/img/TicketApp.PNG"
 import TodoApp from "../assets/img/TodoApp.PNG"
 import excel from "../assets/img/excel.PNG"
+import MoviesOnRent from "../assets/img/MoviesOnRent.PNG"
+import InstaClone from "../assets/img/InstaClone.png"
+import LaalMati from "../assets/img/LaalMati.PNG"
+import Tnega from "../assets/img/Tnega.PNG"
+import SpringBooty from "../assets/img/SpringBooty.PNG"
+
+
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -53,6 +60,65 @@ export const Projects = () => {
     },
 
   ];
+
+  const reactProjects = [
+
+    {
+      title: "LaalMati.Com",
+      description: "Co-Founder , Ecommerce App which solves the problem of Recycable Ganesh Murtis",
+      imgUrl: LaalMati,
+      code:"https://github.com/PavanButke/Sculptura",
+      demo:"https://statuesque-biscotti-8bff76.netlify.app/"
+    },
+    
+    {
+      title: "Project Tnega",
+      description: "Associated with Simplyfi tech Banglore, KN.      • Develop new features like Graphs and Maps with existing code with React.• Integrating RESTfull APIs.• Frontend UI/UX implementatio. ",
+      imgUrl: Tnega,
+      code: "",
+      demo: "https://tnega.tn.gov.in/"
+    },
+    {
+      title: "MoviesOnRent",
+      description: "Fronted Website,allows to show movies details. In this site, we have used REACT.js for entire development.Learnt concept of Props , ArrowFunc. ",
+      imgUrl: MoviesOnRent,
+      code: "https://github.com/PavanButke/Web_Dev_PP11/tree/main/React%20Projects/MOVIES%20APP/movies",
+      demo: "https://curious-manatee-83a528.netlify.app/"
+    },
+    {
+      title: "Reels App",
+      description: "Used REACT.Js Library. Learnt concept of Context, AuthContext, SignUp Feature , Redux , Hooks , Media Import. For UI ,we used Bootstrap, for DB used Firestore , integrated using Firebase.",
+      imgUrl: InstaClone,
+      code:"https://github.com/PavanButke/InstaReels",
+      demo:"https://tranquil-pika-ba9bfc.netlify.app/Login"
+    },
+
+
+
+  ];
+
+  const backendProjects = [
+
+    {
+      title: "LaalMati.Com",
+      description: "Co-Founder ,Developed Ecommerce Backend Using Node.js Express.js MongoDB",
+      imgUrl: LaalMati,
+      code:"https://github.com/PavanButke/Sculptura",
+      demo:"https://statuesque-biscotti-8bff76.netlify.app/"
+    },
+  ];
+
+    const springBootProject = [
+
+      {
+        title: "ProductServices",
+        description: "A Backend MicroService Built Using Spring Boot , here we have used EurekaServer , LoadBalancer , DiscoveryClient ",
+        imgUrl: SpringBooty,
+        code:"https://github.com/PavanButke/springboot/tree/MicroserviceA_Z",
+       
+      },
+    ];
+
 
   return (
     <section className="project" id="project">
@@ -100,11 +166,11 @@ export const Projects = () => {
                     <Tab.Pane eventKey="second">
                       <Row>
                         {
-                          projects.map((project, index) => {
+                          reactProjects.map((reactProjects, index) => {
                             return (
                               <ProjectCard
                                 key={index}
-                                {...project}
+                                {...reactProjects}
                                 />
                             )
                           })
@@ -116,7 +182,34 @@ export const Projects = () => {
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <Row>
+                        {
+                          backendProjects.map((backendProjects, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...backendProjects}
+                                />
+                            )
+                          })
+                          
+                        }
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="fourth">
+                      <Row>
+                        {
+                          springBootProject.map((springBootProject, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...springBootProject}
+                                />
+                            )
+                          })
+                          
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
